@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+void bubble();
 void insertion();
 void merges();
 void quicks();
@@ -20,6 +21,21 @@ void swap(int *k, int *l){
     temp=*k;
     *k=*l;
     *l=temp;
+}
+
+void bubble(int *b, int size){
+int i,j,c=0,temp;
+for(i=0;i<size;i++){
+    c=0;
+    for(j=0;j<size-1;j++){
+        if(b[j]>b[j+1]){
+           swap(b+j,b+j+1);
+            c++;
+        }
+    //printf("c=%d\n",c);
+    }
+    if(!c) break;
+}
 }
 
 void insertion(int *a,int size){
