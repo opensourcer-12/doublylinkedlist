@@ -20,6 +20,7 @@ void nend();
 void searchk();
 void searchi();
 void deletek();
+void reverse();
 void deletei();
 void deletelist();
 
@@ -31,7 +32,7 @@ printf("3.Insert an element at a particular index position of the list.\n4.Delet
 printf("5.Delete an element from the list given the index of the node.\n6.Search an element from the list given the key.\n");
 printf("7.Delete the linked list.\n8.Search an element from the list given the index of the node.\n");
 printf("9.Get the nth node of the list.\n10.Get the nth node from the end of the list.\n11.Count the number of nodes of the list.\n");
-printf("12.Get the middle element of the list.\n13.Print the list.\n  -1 to exit\n");
+printf("12.Get the middle element of the list.\n13.Print the list.\n14.Reverse the list.\n  -1 to exit\n");
 scanf("%d",&n);
 if(n==0){
     aa *temp=NULL;
@@ -337,3 +338,25 @@ void print(){
         p=p->link;
 }
 }
+
+void reverse()
+    {
+     int i,c=length();
+     int a[c];
+     p=head;
+     for(i=0;i<c;i++){
+        a[i]=p->data;
+        p=p->link;
+     }
+     p=head;
+     for(i=c-1;i>=0;i--){
+        p->data=a[i];
+        p=p->link;
+     }
+    }
+
+
+
+
+
+
